@@ -5,10 +5,6 @@ import "./SafeMath.sol";
 import "./WithdrawalVault.sol";
 import "./TransferBurnToken.sol";
 
-/**
- * @title Basic token
- * @dev Basic version of StandardToken, with no allowances.
- */
 contract TransferBurnCrowdsale {
   using SafeMath for uint256;
 

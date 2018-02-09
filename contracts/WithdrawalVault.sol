@@ -5,12 +5,6 @@ import "./Ownable.sol";
 import "./TransferBurnToken.sol";
 
 
-/**
- * @title RefundVault
- * @dev This contract is used for storing funds while a crowdsale
- * is in progress. Supports refunding the money if crowdsale fails,
- * and forwarding it if crowdsale is successful.
- */
 contract WithdrawalVault is Ownable {
   using SafeMath for uint256;
 
