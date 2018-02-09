@@ -57,6 +57,9 @@ contract TransferBurnToken is MintableToken {
   function getTransferBurnValue(uint256 _value) public view returns (uint256) {
     uint256 _daysDelta = (now.sub(deploymentTime)).div(86400);
     uint256 _multiplicator = 100 - _daysDelta;
+    if (_multiplicator < 1) {
+      _multiplicator = 1;
+    }
     return _value.mul(_multiplicator).div(1000);
   }
 }
